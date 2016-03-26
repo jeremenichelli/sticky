@@ -99,7 +99,39 @@
         </div>
     </footer>
 
-    <script src="scripts/steer.js"></script>
-    <script src="scripts/main.js"></script>
+    <script>
+        var header = document.getElementsByTagName('header')[0],
+            y = window.scrollY,
+            previousDirection = null,
+            direction = null;
+
+        var actions = {
+            up: function() {
+                header.classList.remove('header--hidden');
+            },
+            down: function() {
+                header.classList.add('header--hidden');
+            }
+        };
+
+        window.addEventListener('scroll', function() {
+            direction = window.scrollY > y ? 'down' : 'up';
+
+            // update scroll position
+            y = window.scrollY;
+
+            if (y > 150) {
+                // execute only when more than 150 pixels have been scrolled
+                if (direction !== previousDirection) {
+                    // update direction value
+                    previousDirection = direction;
+
+                    actions[ direction ]();
+                }
+            } else {
+                actions[ 'up' ]();
+            }
+        });
+    </script>
 </body>
 </html>
