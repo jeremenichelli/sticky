@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dynamic header built with steer</title>
+
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.0.0/normalize.css">
+    <link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300" rel="stylesheet" type="text/css">
+
+    <style>
+        body {
+            background-color: #fefefe;
+            color: #404040;
+            font-family: 'Roboto Condensed', Helvetica Neue, sans-serif;
+            font-size: 18px;
+            font-weight: 300;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #00c853;
+            color: #fefefe;
+            height: 100px;
+            position: fixed;
+            width: 100%;
+            transition: transform .35s ease;
+        }
+
+        .header--hidden {
+            transform: translate(0, -100%);
+        }
+
+        a {
+            color: #404040;
+            font-weight: 400;
+            text-decoration: none;
+        }
+
+        .container {
+            margin: 0 auto;
+            max-width: 750px;
+            padding: 50px;
+        }
+
+        .main {
+            padding: 100px 0 0;
+        }
+
+        .main p {
+            background-color: #eceff1;
+            height: 30px;
+            margin: 50px 0 0;
+        }
+
+        footer {
+            background-color: #eceff1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+        </div>
+    </header>
+
+    <section class="main">
+        <div class="container">
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            2016 &copy; Jeremias Menichelli <strong>|</strong> Dynamic header built with <a href="https://jeremenichelli.github.io/steer">steer</a>
+        </div>
+    </footer>
+
+    <script src="scripts/steer.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
